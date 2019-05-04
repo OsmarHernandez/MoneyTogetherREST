@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoanController {
 
-    @RequestMapping("loan")
+    @RequestMapping("/loan")
     public String message() {
         return "L O A N S";
     }

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentController {
 
-    @RequestMapping("payment")
+    @RequestMapping("/payment")
     public String message() {
         return "P A Y M E N T S";
     }
