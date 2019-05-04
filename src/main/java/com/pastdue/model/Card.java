@@ -1,9 +1,14 @@
 package com.pastdue.model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "card")
 public class Card {
 
+    @Id
     String id;
     String ownerId;
     String number;
