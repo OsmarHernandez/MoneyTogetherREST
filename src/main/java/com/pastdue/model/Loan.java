@@ -1,25 +1,30 @@
 package com.pastdue.model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 
+@Entity
+@Table(name = "loan")
 public class Loan {
 
+    @Id
     String id;
     String concept;
     Double amount;
     Double remainToPay;
     String paymentTerm;
     String paymentPlan;
-    Date start;
+    String start;
     String lenderId;
-    Integer lenderCard;
+    String lenderCard;
     String borrowerId;
-    Integer borrowerCard;
+    String borrowerCard;
 
     public Loan() { }
 
     public Loan(String id, String concept, Double amount, Double remainToPay, String paymentTerm, String paymentPlan,
-                Date start, String lenderId, Integer lenderCard, String borrowerId, Integer borrowerCard) {
+                String start, String lenderId, String lenderCard, String borrowerId, String borrowerCard) {
         this.id = id;
         this.concept = concept;
         this.amount = amount;
@@ -81,11 +86,11 @@ public class Loan {
         this.paymentPlan = paymentPlan;
     }
 
-    public Date getStart() {
+    public String getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(String start) {
         this.start = start;
     }
 
@@ -97,11 +102,11 @@ public class Loan {
         this.lenderId = lenderId;
     }
 
-    public Integer getLenderCard() {
+    public String getLenderCard() {
         return lenderCard;
     }
 
-    public void setLenderCard(Integer lenderCard) {
+    public void setLenderCard(String lenderCard) {
         this.lenderCard = lenderCard;
     }
 
@@ -113,11 +118,11 @@ public class Loan {
         this.borrowerId = borrowerId;
     }
 
-    public Integer getBorrowerCard() {
+    public String getBorrowerCard() {
         return borrowerCard;
     }
 
-    public void setBorrowerCard(Integer borrowerCard) {
+    public void setBorrowerCard(String borrowerCard) {
         this.borrowerCard = borrowerCard;
     }
 }

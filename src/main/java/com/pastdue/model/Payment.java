@@ -1,17 +1,22 @@
 package com.pastdue.model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 
+@Entity
+@Table(name = "payment")
 public class Payment {
 
+    @Id
     String id;
     String loanId;
     Double paymentAmount;
-    Date payDate;
+    String payDate;
 
     public Payment() { }
 
-    public Payment(String id, String loanId, Double paymentAmount, Date payDate) {
+    public Payment(String id, String loanId, Double paymentAmount, String payDate) {
         this.id = id;
         this.loanId = loanId;
         this.paymentAmount = paymentAmount;
@@ -42,11 +47,11 @@ public class Payment {
         this.paymentAmount = paymentAmount;
     }
 
-    public Date getPayDate() {
+    public String getPayDate() {
         return payDate;
     }
 
-    public void setPayDate(Date payDate) {
+    public void setPayDate(String payDate) {
         this.payDate = payDate;
     }
 }

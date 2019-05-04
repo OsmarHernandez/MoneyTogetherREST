@@ -1,19 +1,24 @@
 package com.pastdue.model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 
+@Entity
+@Table(name = "user")
 public class User {
 
+    @Id
     String id;
     String firstname;
     String lastname;
     String email;
     String password;
-    Date birthDate;
+    String birthDate;
 
     public User() { }
 
-    public User(String id, String firstname, String lastname, String email, String password, Date birthDate) {
+    public User(String id, String firstname, String lastname, String email, String password, String birthDate) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -62,11 +67,11 @@ public class User {
         this.password = password;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 }
