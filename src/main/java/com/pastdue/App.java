@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class App
 {
 
-    @RequestMapping("/")
+    @RequestMapping("welcome")
     @ResponseBody
     public String welcome() {
         return "Welcome to Money Together API v1!";
