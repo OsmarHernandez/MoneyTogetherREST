@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: MoneyTogether
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: antoniospinola
+Implementation-Vendor-Id: com.pastdue
+Build-Jdk: 1.8.0_201
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/MoneyTogether
+Created-By: Maven Integration for Eclipse
+
